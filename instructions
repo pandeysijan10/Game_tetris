@@ -1,0 +1,57 @@
+/* Tetris
+ *
+ * Implementation of tetris game
+ *
+ * Program author
+ * Name: Sijan Pandey
+ * Student number: 293831
+ * UserID: xnsipa
+ * E-Mail: sijan.pandey@tuni.fi
+ *
+ * This text includes usage of the program, rules of the game and
+ * functionalities implemented in the game, program structure.
+ *
+ * Usage:
+ * This tetris game can be starting by pressing Start button in the ui. After
+ * pressing start button, tetrominos automatically fall downwards. Keys 'A',
+ * 'S', 'D' can be used to move falling tetrominos to move them to left, down
+ * and right respectively. Pressing 'S' makes the tetrominos fall faster. Quit
+ * button can pressed anytime to close the program. Start button is disabled
+ * during the game. Player can give their username before starting the game.
+ * Points earned and time elapsed are also shown updated in the game. Once a
+ * game is over new game can be started by pressing start button again.
+ *
+ * Rules of game:
+ * Player can move tetromino horizontally and vertically downwards. Tetrominos
+ * fall automatically randomly. Moving tetrominos outside the game area and over
+ * another tetromino is illegal. Once a tetromino lands at the bottom of game area or
+ * on a old tetromino, the tetromino cannot be moved further anymore. New
+ * tetromino starts falling then. Points are awarded based on the number of
+ * tetrominos that have fallen. 1 tetromino = 1 point. Half tetromino at the end
+ * is not counted. Tetrominos cannot be rotated. When tetrominos fill the game
+ * area and don't have place to further move downwards, the game ends. Every
+ * new tetromino after one has faster speed until it reaches a constant speed.
+ *
+ * Functionalities implemented:
+ * 1. All minimal requirements.
+ * 2. All seven different tetrominos have been implemented.
+ * 3. Time used so far shown during the game in seconds elapsed.
+ * 4. Points are counted based on number of fallen tetrominos and displayed to
+ *    user.
+ * 5. Tetrominos fall quicker when the game advances.
+ * 6. After the game ends, it is possible to start the game again from the
+ *    beginning without starting the program again.
+ * 7. Points earned by player are stored in a file with their names and time
+ *    taken during the game.
+ * 8. The falling tetromino can be moved simultaneously as down as possible
+ *    with a key 'S'.
+ *
+ * Program structure and design:
+ * Mainwindow handles all the processes. For each tetromino, whether the move
+ * is legal or not is checked by coordinates of game area and old tetrominos.
+ * Tetromino can move only if move is legal. Two timers are used for maintaining
+ * speed of tetromino and time elapsed. New tetromino is created at random position in x axis
+ * once old one have nowhere to move downwards anymore. Points are also added at this time.
+ * If a tetromino has nowhere to move and is partially or fully out of game area
+ * the game ends.
+ * */
